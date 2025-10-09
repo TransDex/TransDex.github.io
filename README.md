@@ -6,20 +6,22 @@ A clean, responsive template for academic project pages.
 
 
 Example project pages built using this template are:
-- https://horwitz.ai/probex
-- https://vision.huji.ac.il/probegen
-- https://horwitz.ai/mother
-- https://horwitz.ai/spectral_detuning
-- https://vision.huji.ac.il/ladeda
-- https://vision.huji.ac.il/dsire
-- https://horwitz.ai/podd
-- https://dreamix-video-editing.github.io
-- https://horwitz.ai/conffusion
-- https://horwitz.ai/3d_ads/
-- https://vision.huji.ac.il/ssrl_ad
-- https://vision.huji.ac.il/deepsim
 
-
+- Light theme:
+  - https://horwitz.ai/probex
+  - https://vision.huji.ac.il/probegen
+  - https://horwitz.ai/mother
+  - https://horwitz.ai/spectral_detuning
+  - https://vision.huji.ac.il/ladeda
+  - https://vision.huji.ac.il/dsire
+  - https://horwitz.ai/podd
+  - https://dreamix-video-editing.github.io
+  - https://horwitz.ai/conffusion
+  - https://horwitz.ai/3d_ads/
+  - https://vision.huji.ac.il/ssrl_ad
+  - https://vision.huji.ac.il/deepsim
+- Dark theme:
+  - https://diffuman4d.github.io/
 
 ## Start using the template
 To start using the template click on `Use this Template`.
