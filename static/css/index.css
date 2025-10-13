@@ -334,6 +334,14 @@ body {
   height: auto !important;
 }
 
+.cv-figure {
+  max-width: min(720px, 90vw);
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+
 .results-carousel {
   overflow: hidden;
   padding: 1rem 0;
