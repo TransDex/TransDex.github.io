@@ -107,7 +107,8 @@
     }
 
     .hero .box {
-      height: 250px;
+      min-height: 250px;
+      height: auto;
       display: flex;
       flex-direction: column;
       justify-content: center;
@@ -116,11 +117,6 @@
       word-wrap: break-word;
       padding: 20px;
       box-sizing: border-box;
-    }
-
-    .columns {
-      display: flex;
-      justify-content: space-between;
     }
 
     table {
@@ -138,6 +134,28 @@
       box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
       padding: 20px;
       margin: 20px 0;
+      overflow-x: auto;
+      padding-bottom: 1.5rem;
+    }
+
+    .performance-table table {
+      width: 100%;
+      min-width: 640px;
+    }
+
+    .performance-table .compact-table {
+      min-width: 880px;
+      font-size: 0.85rem;
+    }
+
+    @media (max-width: 480px) {
+      .performance-table table {
+        min-width: 520px;
+      }
+
+      .performance-table .compact-table {
+        min-width: 700px;
+      }
     }
 
     .best-result {
@@ -145,6 +163,13 @@
       font-weight: bold;
       border-radius: 5px;
       padding: 2px 4px;
+    }
+
+    @media (max-width: 768px) {
+      .hero .box {
+        min-height: 200px;
+        padding: 16px;
+      }
     }
   </style>
 </head>
@@ -308,7 +333,7 @@
   <div class="hero-body">
     <div class="container">
       <h2 class="title is-3 has-text-centered">Key Features</h2>
-      <div class="columns">
+  <div class="columns scrolling-columns">
         <div class="column">
           <div class="box">
             <h3 class="title is-5">⚛️ Quantum-Classical Hybrid</h3>
@@ -360,7 +385,7 @@
         
         <div class="performance-table">
           <h4 class="title is-4">Quantum vs Classical SVM Performance Comparison</h4>
-          <table class="table is-striped is-hoverable" style="width: 100%; margin: auto;">
+          <table class="table is-striped is-hoverable">
             <thead>
               <tr>
                 <th>Dataset</th>
@@ -489,7 +514,7 @@
 
         <div class="performance-table">
           <h4 class="title is-4">Detailed Cross-Validation Performance (Best Models)</h4>
-          <table class="table is-striped is-hoverable" style="width: 140%; margin: 0 auto; font-size: 0.8rem;">
+          <table class="table is-striped is-hoverable compact-table">
             <thead>
               <tr>
                 <th>Dataset</th>
@@ -705,7 +730,7 @@
   <div class="hero-body">
     <div class="container">
       <h2 class="title is-3 has-text-centered">Methodology Overview</h2>
-      <div class="columns">
+  <div class="columns scrolling-columns">
         <div class="column">
           <div class="box">
             <h3 class="title is-5">📊 Data Distillation</h3>
@@ -732,13 +757,13 @@
 
       
     <h2 class="title is-3 has-text-centered">Acknowledgements</h2>
-<div class="columns is-centered" style="margin-top: 20px;">
-  <div class="column is-narrow" style="margin-right: 20px;">
+<div class="columns is-centered" style="margin-top: 10px;">
+  <div class="column is-narrow" style="margin-right: 10cap;">
     <figure class="image is-128x128">
       <img src="static/images/manolo.png" alt="Manolo Logo">
     </figure>
   </div>
-  <div class="column is-narrow" style="margin-right: 20px;">
+  <div class="column is-narrow" style="margin-right: 10px;">
     <figure class="image is-128x128">
       <img src="static/images/ceadar.png" alt="Ceadar Logo">
     </figure>
@@ -752,7 +777,7 @@
 <!-- Citation (BibTeX) -->
 <section class="section">
   <div class="container is-max-desktop">
-    <h2 class="title is-4 has-text-centered">Citation</h2>
+    <h2 class="title is-3 has-text-centered">BibTeX</h2>
     <pre><code>@article{ordonez2025embedding,
   title={Embedding-Aware Quantum-Classical SVMs for Scalable Quantum Machine Learning},
   author={Ord{\'o}{\~n}ez, Sebasti{\'a}n Andr{\'e}s Cajas and Torres, Luis Fernando Torres and Bifulco, Mario and Duran, Carlos Andres and Bosch, Cristian and Carbajo, Ricardo Simon},

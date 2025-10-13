@@ -103,6 +103,10 @@ body {
   padding: 4rem 1.5rem;
 }
 
+.section.hero .hero-body {
+  padding-top: 3rem;
+}
+
 .teaser .hero-body {
   padding-top: 2rem;
   padding-bottom: 4rem;
@@ -111,6 +115,52 @@ body {
 .teaser {
   font-family: 'Inter', sans-serif;
 }
+
+.scrolling-columns {
+  display: flex;
+  gap: 1rem;
+  overflow-x: auto;
+  padding: 0 1rem 1rem;
+  margin: 0 -1rem;
+  scroll-snap-type: x mandatory;
+}
+
+.scrolling-columns .column {
+  flex: 0 0 280px;
+  min-width: 260px;
+  scroll-snap-align: start;
+}
+
+.scrolling-columns .box {
+  height: 100%;
+}
+
+.scrolling-columns::-webkit-scrollbar {
+  height: 6px;
+}
+
+.scrolling-columns::-webkit-scrollbar-thumb {
+  background: rgba(100, 116, 139, 0.4);
+  border-radius: 999px;
+}
+
+.scrolling-columns::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+@media (min-width: 768px) {
+  .scrolling-columns {
+    overflow-x: visible;
+    margin: 0;
+    scroll-snap-type: none;
+  }
+
+  .scrolling-columns .column {
+    flex: 1 1 0;
+    min-width: 0;
+  }
+}
+
 
 
 /* Publication Content Styling */
@@ -251,6 +301,11 @@ body {
 .publication-body img:hover {
   transform: translateY(-2px);
   box-shadow: var(--shadow-lg);
+}
+
+.hero-body img {
+  max-width: 100%;
+  height: auto !important;
 }
 
 .results-carousel {
