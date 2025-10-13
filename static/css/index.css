@@ -161,6 +161,32 @@ body {
   }
 }
 
+.acknowledgements-logos {
+  gap: 1.5rem;
+  align-items: center;
+}
+
+.acknowledgements-logos .column {
+  display: flex;
+  justify-content: center;
+}
+
+@media (max-width: 768px) {
+  .acknowledgements-logos {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .acknowledgements-logos .column {
+    width: auto;
+    margin-bottom: 1rem;
+  }
+
+  .acknowledgements-logos .column:last-child {
+    margin-bottom: 0;
+  }
+}
+
 
 
 /* Publication Content Styling */
