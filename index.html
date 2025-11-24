@@ -304,7 +304,7 @@
     <div class="columns is-centered has-text-centered">
       <div class="column is-four-fifths">
         <h2 class="title is-3">Abstract</h2>
-        <div class="content has-text-justified" style="text-indent: 2em; line-height: 1.5;">
+        <div class="has-text-justified" style="text-indent: 2em; line-height: 1.5;">
           <!-- TODO: Replace with your paper abstract -->
           <p>
                Dexterous manipulation is a crucial skill that enables robots to complete complex tasks. Multi-fingered dexterous hands are typically employed to achieve this capability, yet they often face significant perceptual challenges during manipulation due to visual self-occlusion. These challenges are exacerbated when transparent objects are manipulated, as complex properties of light refraction and reflection cause a loss of depth information and introduce depth noise. To address these challenges, this paper proposes TransDex, a 3D visuo-tactile fusion motor policy based on point cloud reconstruction pre-training. Specifically, we first propose a self-supervised point cloud reconstruction pre-training approach based on Transformer. This method accurately recovers the 3D structure of an object from interactive point clouds of dexterous hands, even when random noise and large-scale masking are added. Building on this, TransDex is constructed in which  perceptual encoding adopts a fine-grained hierarchical scheme and multi-round attention mechanisms adaptively fuse features of the robotic arm and dexterous hand to enable differentiated motor prediction. Results from transparent object manipulation experiments conducted on a real robotic system demonstrate that TransDex outperforms existing baseline methods. Further analysis validated the generalization capabilities of TransDex and the effectiveness of each of its components.          </p>
@@ -326,10 +326,10 @@
         
         <!-- Main Image with Caption -->
         <div class="content" style="margin-top: 2em;">
-          <figure class="image" style="width: 50%; margin: 0 auto;">
+          <figure class="image" style="width: 150%; margin: 0 auto;">
             <img src="static/images/Method Overview.png" alt="Diagram illustrating the TransDex method overview" loading="lazy">
           </figure>
-          <p class="content has-text-justified" style="text-indent: 2em; line-height: 1.5;">
+          <p class="has-text-justified" style="text-indent: 2em; line-height: 1.5;">
            <em>TransDex</em> operates in two phases: (1) The pre-training framework encodes randomly masked and noisy hand object interaction point cloud, and reconstructs the complete object point cloud via a decoder. This 
             process endows the pre-trained network with robust object comprehension against incomplete perceptual scenarios. (2) Building upon the pre-trained network, the motor policy
             accomplishes the extraction and multi-modal integration of fine-grained visuo-tactile information, ultimately generating differentiated motion predictions for both the robotic arm and dexterous hand.
