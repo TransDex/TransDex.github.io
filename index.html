@@ -392,38 +392,66 @@
     
 
     
-<!-- Video carousel -->
 <section class="hero is-small">
   <div class="hero-body">
     <div class="container">
+      <!-- 主标题 -->
       <h2 class="title is-3" style="text-align: center;">Real-World Demonstrations</h2>
-      <div id="results-carousel" class="carousel results-carousel">
-        <div class="item item-video1">
-          <!-- TODO: Add poster image for better preview -->
-          <video poster="" id="video1" controls muted loop height="100%" preload="metadata">
-            <!-- Your video file here -->
-            <source src="static/videos/carousel1.mp4" type="video/mp4">
-          </video>
+      
+      <!-- 新增的左对齐副标题 -->
+      <h3 class="title is-4 has-text-left" style="margin-top: 0.5em;">Pouring</h3>
+      
+      <!-- 使用 Bulma 的 columns 布局实现四列并排 -->
+      <div class="columns is-multiline" style="margin-top: 2em;">
+        
+        <!-- 视频 1 -->
+        <div class="column is-one-quarter">
+          <div class="card">
+            <div class="card-content">
+              <video controls muted loop style="width: 100%; height: auto; max-height: 200px;">
+                <source src="static/videos/Pouring.mp4" type="video/mp4">
+              </video>
+            </div>
+          </div>
         </div>
-        <div class="item item-video2">
-          <!-- TODO: Add poster image for better preview -->
-          <video poster="" id="video2" controls muted loop height="100%" preload="metadata">
-            <!-- Your video file here -->
-            <source src="static/videos/carousel2.mp4" type="video/mp4">
-          </video>
+
+        <!-- 视频 2 -->
+        <div class="column is-one-quarter">
+          <div class="card">
+            <div class="card-content">
+              <video controls muted loop style="width: 100%; height: auto; max-height: 200px;">
+                <source src="static/videos/Pouring1.mp4" type="video/mp4">
+              </video>
+            </div>
+          </div>
         </div>
-        <div class="item item-video3">
-          <!-- TODO: Add poster image for better preview -->
-          <video poster="" id="video3" controls muted loop height="100%" preload="metadata">
-            <!-- Your video file here -->
-            <source src="static/videos/carousel3.mp4" type="video/mp4">
-          </video>
+
+        <!-- 视频 3 -->
+        <div class="column is-one-quarter">
+          <div class="card">
+            <div class="card-content">
+              <video controls muted loop style="width: 100%; height: auto; max-height: 200px;">
+                <source src="static/videos/Pouring2.mp4" type="video/mp4">
+              </video>
+            </div>
+          </div>
         </div>
+
+        <!-- 视频 4 (新增) -->
+        <div class="column is-one-quarter">
+          <div class="card">
+            <div class="card-content">
+              <video controls muted loop style="width: 100%; height: auto; max-height: 200px;">
+                <source src="static/videos/Pouring3.mp4" type="video/mp4">
+              </video>
+            </div>
+          </div>
+        </div>
+
       </div>
     </div>
   </div>
 </section>
-<!-- End video carousel -->
 
 
 
