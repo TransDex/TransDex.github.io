@@ -316,22 +316,30 @@
 <!-- End paper abstract -->
 
 
-<section class="section">
-  <div class="container">
-    <!-- Section Title -->
-    <h2 class="title is-2 has-text-centered" style="margin-bottom: 1.5em;">Method Overview</h2>
-    
-    <!-- Main Image -->
-    <div class="columns is-centered">
-      <div class="column is-half"> <!-- Adjust the column width as needed -->
-        <figure class="image is-4by3">
-          <img src="static/images/Figure2.png" alt="Diagram illustrating the TransDex method overview" loading="lazy">
-        </figure>
+<section class="section hero is-light">
+  <div class="container is-max-desktop">
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        
+        <!-- Section Title (matches Abstract's style) -->
+        <h2 class="title is-3">Method Overview</h2>
+        
+        <!-- Main Image with Caption -->
+        <div class="content has-text-justified" style="text-indent: 0; margin-top: 2em;">
+          <figure class="image is-4by3" style="margin: 0 auto;">
+            <img src="static/images/Method Overview.png" alt="Diagram illustrating the TransDex method overview" loading="lazy">
+          </figure>
+          <p class="has-text-grey-light is-italic has-text-centered" style="margin-top: 1em;">
+           <em>TransDex</em> operates in two phases: (1) The pre-training framework encodes randomly masked and noisy hand object interaction point cloud, and reconstructs the complete object point cloud via a decoder. This 
+            process endows the pre-trained network with robust object comprehension against incomplete perceptual scenarios. (2) Building upon the pre-trained network, the motor policy
+            accomplishes the extraction and multi-modal integration of fine-grained visuo-tactile information, ultimately generating differentiated motion predictions for both the robotic arm and dexterous hand.
+          </p>
+        </div>
+        
       </div>
     </div>
   </div>
 </section>
-<!-- End image carousel -->
 
 
 <!-- Video carousel -->
