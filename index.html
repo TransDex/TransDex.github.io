@@ -341,23 +341,35 @@
   </div>
 </section>
 
+
+    
 <section class="section hero is-small">
   <div class="container is-max-desktop">
     <div class="columns is-centered">
       <div class="column is-full">
       <h2 class="title is-3" style="text-align: center;">Experiments</h2>
-      
+          <!-- Main Image with Caption -->
+        <div class="content" style="margin-top: 2em;">
+          <figure class="image" style="max-width: 100%; margin: 0 auto;">
+            <img src="static/images/Figure3.png" alt="Robotic System Setup" loading="lazy">
+          </figure>
+          <p class="has-text-justified" style="text-indent: 2em; line-height: 1.5;font-size: 1.1rem;">
+           <span style="font-weight: bold;">Robotic System Setup:</span>  ① a 16-DOF dexterous hand, with array tactile sensors equipped on the fingertips and finger pads; ② a 7-DOF robotic arm; ③ a depth camera; ④ experimental items; ⑤ a data glove; ⑥ a motion capture camera.
+  </p>
+          </p>
+        </div>
         <!-- Main Image with Caption -->
         <div class="content" style="margin-top: 2em;">
           <figure class="image" style="max-width: 100%; margin: 0 auto;">
-            <img src="static/images/Figure4.png" alt="Experiments results" loading="lazy">
+            <img src="static/images/Experiments.png" alt="Experiments results" loading="lazy">
           </figure>
           <p class="has-text-justified" style="text-indent: 2em; line-height: 1.5;font-size: 1.1rem;">
-           <span style="font-weight: bold;"><em>TransDex</em></span> operates in two phases: <span style="font-weight: bold;">(1)</span> The pre-training framework encodes randomly masked and noisy hand object interaction point cloud, and reconstructs the complete object point cloud via a decoder. This 
-            process endows the pre-trained network with robust object comprehension against incomplete perceptual scenarios. <span style="font-weight: bold;">(2)</span> Building upon the pre-trained network, the motor policy
-            accomplishes the extraction and multi-modal integration of fine-grained visuo-tactile information, ultimately generating differentiated motion predictions for both the robotic arm and dexterous hand.
+           <span style="font-weight: bold;"><em>TransDex</em></span> demonstrates strong capabilities in dexterous manipulation tasks of transparent objects,
+            while also exhibiting strong generalisation and robustness against unseen and complex scenarios.
           </p>
         </div>
+
+        
       </div>
     </div>
     </div>
