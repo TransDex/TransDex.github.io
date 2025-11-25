@@ -503,6 +503,21 @@
   </div>
 </section>
 
+
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+  document.querySelectorAll('video').forEach(video => {
+    // 设置 3 倍速
+    video.playbackRate = 3;
+    
+    // 禁用右键菜单
+    video.addEventListener('contextmenu', function(e) {
+      e.preventDefault();
+    });
+  });
+});
+</script>
+        
 <!-- 非轮播组件，直接取消注释即可-->
         <!--
         <section class="hero is-small">
