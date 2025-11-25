@@ -401,46 +401,42 @@
       <!-- 新增的左对齐副标题 -->
       <h3 class="title is-4 has-text-left" style="margin-top: 0.5em;">Pouring</h3>
       
-      <!-- 使用 Bulma 的 columns 布局实现四列并排 -->
-      <div class="columns is-gapless">
+     <!-- 使用 Flexbox 实现四列并排且不换行 -->
+      <div style="display: flex; flex-wrap: nowrap; gap: 10px;">
         
         <!-- 视频 1 -->
-        <div class="column is-one-quarter" style="padding: 0;"> <!-- 去掉列的内边距 -->
-          <div style="width: 100%; height: 240px; overflow: hidden;"> <!-- 固定容器高度，避免视频变形 -->
-            <video controls muted loop style="width: 100%; height: 100%; object-fit: cover;"> <!-- 视频充满容器 -->
+        <div style="flex: 1; min-width: 0;">
+          <div style="position: relative; width: 100%; height: 200px; background-color: black;">
+            <video controls muted loop style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; object-fit: contain;">
               <source src="static/videos/Pouring.mp4" type="video/mp4">
-              </video>
-            </div>
+            </video>
           </div>
         </div>
 
         <!-- 视频 2 -->
-        <div class="column is-one-quarter" style="padding: 0;"> <!-- 去掉列的内边距 -->
-          <div style="width: 100%; height: 240px; overflow: hidden;"> <!-- 固定容器高度，避免视频变形 -->
-            <video controls muted loop style="width: 100%; height: 100%; object-fit: cover;"> <!-- 视频充满容器 -->
+        <div style="flex: 1; min-width: 0;">
+          <div style="position: relative; width: 100%; height: 200px; background-color: black;">
+            <video controls muted loop style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; object-fit: contain;">
               <source src="static/videos/Pouring1.mp4" type="video/mp4">
-              </video>
-            </div>
+            </video>
           </div>
         </div>
 
         <!-- 视频 3 -->
-       <div class="column is-one-quarter" style="padding: 0;"> <!-- 去掉列的内边距 -->
-          <div style="width: 100%; height: 240px; overflow: hidden;"> <!-- 固定容器高度，避免视频变形 -->
-            <video controls muted loop style="width: 100%; height: 100%; object-fit: cover;"> <!-- 视频充满容器 -->
+        <div style="flex: 1; min-width: 0;">
+          <div style="position: relative; width: 100%; height: 200px; background-color: black;">
+            <video controls muted loop style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; object-fit: contain;">
               <source src="static/videos/Pouring2.mp4" type="video/mp4">
-              </video>
-            </div>
+            </video>
           </div>
         </div>
 
-        <!-- 视频 4 (新增) -->
-        <div class="column is-one-quarter" style="padding: 0;"> <!-- 去掉列的内边距 -->
-          <div style="width: 100%; height: 240px; overflow: hidden;"> <!-- 固定容器高度，避免视频变形 -->
-            <video controls muted loop style="width: 100%; height: 100%; object-fit: cover;"> <!-- 视频充满容器 -->
+        <!-- 视频 4 -->
+        <div style="flex: 1; min-width: 0;">
+          <div style="position: relative; width: 100%; height: 200px; background-color: black;">
+            <video controls muted loop style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; object-fit: contain;">
               <source src="static/videos/Pouring3.mp4" type="video/mp4">
-              </video>
-            </div>
+            </video>
           </div>
         </div>
 
