@@ -286,7 +286,7 @@
   <div class="container is-max-desktop">
     <div class="hero-body">
       <!-- TODO: Replace with your teaser video -->
-      <video poster="" id="tree" autoplay controls muted loop height="100%" preload="metadata">
+      <video poster="" id="overview" autoplay controls muted loop height="100%" preload="metadata">
         <!-- TODO: Add your video file path here -->
         <source src="static/videos/banner_video.mp4" type="video/mp4">
       </video>
@@ -506,7 +506,7 @@
 
 <script>
 document.addEventListener('DOMContentLoaded', function() {
-  document.querySelectorAll('video').forEach(video => {
+  document.querySelectorAll('video:not(#overview)').forEach(video => {
     // 1. 设置 3 倍速
     video.playbackRate = 3;
     
