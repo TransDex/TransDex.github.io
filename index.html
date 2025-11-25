@@ -507,16 +507,48 @@
 <script>
 document.addEventListener('DOMContentLoaded', function() {
   document.querySelectorAll('video').forEach(video => {
-    // 设置 3 倍速
+    // 1. 设置 3 倍速
     video.playbackRate = 3;
     
-    // 禁用右键菜单
+    // 2. 禁用右键菜单
     video.addEventListener('contextmenu', function(e) {
       e.preventDefault();
     });
+
+    // 3. 默认静音
+    video.muted = true;
+    
+    // 4. 强制锁定静音状态
+    // 监听音量变化事件
+    video.addEventListener('volumechange', function() {
+      // 如果音量被设置为非零，强制将其重置为 0 并静音
+      if (video.volume !== 0) {
+        video.volume = 0;
+        video.muted = true;
+      }
+    });
+
+    // 5. 防止通过键盘快捷键调整音量
+    video.addEventListener('keydown', function(e) {
+      // 禁止上下箭头键（通常用于调整音量）
+      if (e.key === 'ArrowUp' || e.key === 'ArrowDown') {
+        e.preventDefault();
+      }
+    });
+
+    // 6. 隐藏音量控件（如果有 controls 的话）
+    if (video.hasAttribute('controls')) {
+      // 尝试添加 'novolume' 到 controlsList
+      if (video.controlsList && video.controlsList.add) {
+        video.controlsList.add('novolume');
+      }
+      // 为了更好的兼容性，可以同时设置一个 CSS 规则来隐藏音量按钮
+      // 注意: 这需要配合 CSS 使用，或者使用更复杂的 JS 来移除 DOM 元素
+    }
   });
 });
 </script>
+
         
 <!-- 非轮播组件，直接取消注释即可-->
         <!--
