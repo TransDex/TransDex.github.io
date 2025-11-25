@@ -542,9 +542,11 @@ document.addEventListener('DOMContentLoaded', function() {
       if (video.controlsList && video.controlsList.add) {
         video.controlsList.add('novolume');
       }
+      
       // 为了更好的兼容性，可以同时设置一个 CSS 规则来隐藏音量按钮
       // 注意: 这需要配合 CSS 使用，或者使用更复杂的 JS 来移除 DOM 元素
     }
+    video.removeAttribute('controls');
   });
 });
 </script>
