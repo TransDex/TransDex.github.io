@@ -392,464 +392,118 @@
 </section>
 
     
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Real-World Demonstrations</title>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
-    <style>
-        .carousel-container {
-            position: relative;
-            width: 100%;
-            max-width: 600px;
-            margin: 0 auto;
-        }
-        
-        .carousel-item {
-            display: none;
-        }
-        
-        .carousel-item.active {
-            display: block;
-        }
-        
-        .carousel-nav {
-            display: flex;
-            justify-content: center;
-            margin-top: 1rem;
-        }
-        
-        .carousel-dot {
-            width: 12px;
-            height: 12px;
-            border-radius: 50%;
-            background-color: #ccc;
-            margin: 0 5px;
-            cursor: pointer;
-        }
-        
-        .carousel-dot.active {
-            background-color: #3273dc;
-        }
-        
-        .video-error {
-            display: none;
-            text-align: center;
-            padding: 2rem;
-            background-color: #f5f5f5;
-            border-radius: 4px;
-        }
-        
-        .video-container {
-            position: relative;
-        }
-        
-        .video-loading {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            background-color: #f5f5f5;
-        }
-    </style>
-</head>
-<body>
-    <section class="hero is-small">
-        <div class="hero-body">
-            <div style="width: 100%; max-width: none; padding: 0 1rem;">
-                <!-- 主标题 -->
-                <h2 class="title is-3" style="text-align: center;">Real-World Demonstrations</h2>
-                
-                <!-- 副标题Pouring -->
-                <h3 class="title is-4 has-text-left" style="margin-top: 2em; margin-bottom: 1em; margin-left: 20%;">Pouring</h3>
-                
-                <!-- 轮播组件容器 -->
-                <div class="carousel-container pouring-carousel">
-                    <!-- 视频 1 -->
-                    <div class="carousel-item active">
-                        <div class="video-container">
-                            <div class="video-loading">Loading video...</div>
-                            <video poster="" controls controlsList="nodownload" muted playsinline loop preload="metadata" 
-                                   style="width: 100%; height: auto; max-height: 400px; object-fit: contain;"
-                                   oncanplay="this.parentElement.querySelector('.video-loading').style.display='none'"
-                                   onerror="showVideoError(this)">
-                                <source src="static/videos/Pouring.mp4" type="video/mp4">
-                                <source src="static/videos/Pouring.webm" type="video/webm">
-                                Your browser does not support the video tag.
-                            </video>
-                            <div class="video-error">
-                                <p>This video cannot be played. Possible reasons:</p>
-                                <ul>
-                                    <li>Video format not supported by your browser</li>
-                                    <li>Video file is missing or corrupted</li>
-                                    <li>Network connection issue</li>
-                                </ul>
-                                <p>Try using a different browser or check the file path.</p>
-                            </div>
-                        </div>
-                    </div>
-                    
-                    <!-- 视频 2 -->
-                    <div class="carousel-item">
-                        <div class="video-container">
-                            <div class="video-loading">Loading video...</div>
-                            <video poster="" controls controlsList="nodownload" muted playsinline loop preload="metadata" 
-                                   style="width: 100%; height: auto; max-height: 400px; object-fit: contain;"
-                                   oncanplay="this.parentElement.querySelector('.video-loading').style.display='none'"
-                                   onerror="showVideoError(this)">
-                                <source src="static/videos/Pouring1.mp4" type="video/mp4">
-                                <source src="static/videos/Pouring1.webm" type="video/webm">
-                                Your browser does not support the video tag.
-                            </video>
-                            <div class="video-error">
-                                <p>This video cannot be played. Possible reasons:</p>
-                                <ul>
-                                    <li>Video format not supported by your browser</li>
-                                    <li>Video file is missing or corrupted</li>
-                                    <li>Network connection issue</li>
-                                </ul>
-                                <p>Try using a different browser or check the file path.</p>
-                            </div>
-                        </div>
-                    </div>
-                    
-                    <!-- 视频 3 -->
-                    <div class="carousel-item">
-                        <div class="video-container">
-                            <div class="video-loading">Loading video...</div>
-                            <video poster="" controls controlsList="nodownload" muted playsinline loop preload="metadata" 
-                                   style="width: 100%; height: auto; max-height: 400px; object-fit: contain;"
-                                   oncanplay="this.parentElement.querySelector('.video-loading').style.display='none'"
-                                   onerror="showVideoError(this)">
-                                <source src="static/videos/Pouring2.mp4" type="video/mp4">
-                                <source src="static/videos/Pouring2.webm" type="video/webm">
-                                Your browser does not support the video tag.
-                            </video>
-                            <div class="video-error">
-                                <p>This video cannot be played. Possible reasons:</p>
-                                <ul>
-                                    <li>Video format not supported by your browser</li>
-                                    <li>Video file is missing or corrupted</li>
-                                    <li>Network connection issue</li>
-                                </ul>
-                                <p>Try using a different browser or check the file path.</p>
-                            </div>
-                        </div>
-                    </div>
-                    
-                    <!-- 视频 4 -->
-                    <div class="carousel-item">
-                        <div class="video-container">
-                            <div class="video-loading">Loading video...</div>
-                            <video poster="" controls controlsList="nodownload" muted playsinline loop preload="metadata" 
-                                   style="width: 100%; height: auto; max-height: 400px; object-fit: contain;"
-                                   oncanplay="this.parentElement.querySelector('.video-loading').style.display='none'"
-                                   onerror="showVideoError(this)">
-                                <source src="static/videos/Pouring3.mp4" type="video/mp4">
-                                <source src="static/videos/Pouring3.webm" type="video/webm">
-                                Your browser does not support the video tag.
-                            </video>
-                            <div class="video-error">
-                                <p>This video cannot be played. Possible reasons:</p>
-                                <ul>
-                                    <li>Video format not supported by your browser</li>
-                                    <li>Video file is missing or corrupted</li>
-                                    <li>Network connection issue</li>
-                                </ul>
-                                <p>Try using a different browser or check the file path.</p>
-                            </div>
-                        </div>
-                    </div>
-                    
-                    <!-- 轮播导航 -->
-                    <div class="carousel-nav">
-                        <span class="carousel-dot active" onclick="showCarouselSlide('pouring', 0)"></span>
-                        <span class="carousel-dot" onclick="showCarouselSlide('pouring', 1)"></span>
-                        <span class="carousel-dot" onclick="showCarouselSlide('pouring', 2)"></span>
-                        <span class="carousel-dot" onclick="showCarouselSlide('pouring', 3)"></span>
-                    </div>
-                </div>
-                
-                <!-- 副标题Shaking -->
-                <h3 class="title is-4 has-text-left" style="margin-top: 2em; margin-bottom: 1em; margin-left: 20%;">Shaking</h3>
-                
-                <!-- 轮播组件容器 -->
-                <div class="carousel-container shaking-carousel">
-                    <!-- 视频 1 -->
-                    <div class="carousel-item active">
-                        <div class="video-container">
-                            <div class="video-loading">Loading video...</div>
-                            <video poster="" controls controlsList="nodownload" muted playsinline loop preload="metadata" 
-                                   style="width: 100%; height: auto; max-height: 400px; object-fit: contain;"
-                                   oncanplay="this.parentElement.querySelector('.video-loading').style.display='none'"
-                                   onerror="showVideoError(this)">
-                                <source src="static/videos/Shaking.mp4" type="video/mp4">
-                                <source src="static/videos/Shaking.webm" type="video/webm">
-                                Your browser does not support the video tag.
-                            </video>
-                            <div class="video-error">
-                                <p>This video cannot be played. Possible reasons:</p>
-                                <ul>
-                                    <li>Video format not supported by your browser</li>
-                                    <li>Video file is missing or corrupted</li>
-                                    <li>Network connection issue</li>
-                                </ul>
-                                <p>Try using a different browser or check the file path.</p>
-                            </div>
-                        </div>
-                    </div>
-                    
-                    <!-- 视频 2 -->
-                    <div class="carousel-item">
-                        <div class="video-container">
-                            <div class="video-loading">Loading video...</div>
-                            <video poster="" controls controlsList="nodownload" muted playsinline loop preload="metadata" 
-                                   style="width: 100%; height: auto; max-height: 400px; object-fit: contain;"
-                                   oncanplay="this.parentElement.querySelector('.video-loading').style.display='none'"
-                                   onerror="showVideoError(this)">
-                                <source src="static/videos/Shaking1.mp4" type="video/mp4">
-                                <source src="static/videos/Shaking1.webm" type="video/webm">
-                                Your browser does not support the video tag.
-                            </video>
-                            <div class="video-error">
-                                <p>This video cannot be played. Possible reasons:</p>
-                                <ul>
-                                    <li>Video format not supported by your browser</li>
-                                    <li>Video file is missing or corrupted</li>
-                                    <li>Network connection issue</li>
-                                </ul>
-                                <p>Try using a different browser or check the file path.</p>
-                            </div>
-                        </div>
-                    </div>
-                    
-                    <!-- 视频 3 -->
-                    <div class="carousel-item">
-                        <div class="video-container">
-                            <div class="video-loading">Loading video...</div>
-                            <video poster="" controls controlsList="nodownload" muted playsinline loop preload="metadata" 
-                                   style="width: 100%; height: auto; max-height: 400px; object-fit: contain;"
-                                   oncanplay="this.parentElement.querySelector('.video-loading').style.display='none'"
-                                   onerror="showVideoError(this)">
-                                <source src="static/videos/Shaking2.mp4" type="video/mp4">
-                                <source src="static/videos/Shaking2.webm" type="video/webm">
-                                Your browser does not support the video tag.
-                            </video>
-                            <div class="video-error">
-                                <p>This video cannot be played. Possible reasons:</p>
-                                <ul>
-                                    <li>Video format not supported by your browser</li>
-                                    <li>Video file is missing or corrupted</li>
-                                    <li>Network connection issue</li>
-                                </ul>
-                                <p>Try using a different browser or check the file path.</p>
-                            </div>
-                        </div>
-                    </div>
-                    
-                    <!-- 视频 4 -->
-                    <div class="carousel-item">
-                        <div class="video-container">
-                            <div class="video-loading">Loading video...</div>
-                            <video poster="" controls controlsList="nodownload" muted playsinline loop preload="metadata" 
-                                   style="width: 100%; height: auto; max-height: 400px; object-fit: contain;"
-                                   oncanplay="this.parentElement.querySelector('.video-loading').style.display='none'"
-                                   onerror="showVideoError(this)">
-                                <source src="static/videos/Shaking3.mp4" type="video/mp4">
-                                <source src="static/videos/Shaking3.webm" type="video/webm">
-                                Your browser does not support the video tag.
-                            </video>
-                            <div class="video-error">
-                                <p>This video cannot be played. Possible reasons:</p>
-                                <ul>
-                                    <li>Video format not supported by your browser</li>
-                                    <li>Video file is missing or corrupted</li>
-                                    <li>Network connection issue</li>
-                                </ul>
-                                <p>Try using a different browser or check the file path.</p>
-                            </div>
-                        </div>
-                    </div>
-                    
-                    <!-- 轮播导航 -->
-                    <div class="carousel-nav">
-                        <span class="carousel-dot active" onclick="showCarouselSlide('shaking', 0)"></span>
-                        <span class="carousel-dot" onclick="showCarouselSlide('shaking', 1)"></span>
-                        <span class="carousel-dot" onclick="showCarouselSlide('shaking', 2)"></span>
-                        <span class="carousel-dot" onclick="showCarouselSlide('shaking', 3)"></span>
-                    </div>
-                </div>
-
-                <!-- 副标题Rotating -->
-                <h3 class="title is-4 has-text-left" style="margin-top: 2em; margin-bottom: 1em; margin-left: 20%;">Rotating</h3>
-                
-                <!-- 轮播组件容器 -->
-                <div class="carousel-container rotating-carousel">
-                    <!-- 视频 1 -->
-                    <div class="carousel-item active">
-                        <div class="video-container">
-                            <div class="video-loading">Loading video...</div>
-                            <video poster="" controls controlsList="nodownload" muted playsinline loop preload="metadata" 
-                                   style="width: 100%; height: auto; max-height: 400px; object-fit: contain;"
-                                   oncanplay="this.parentElement.querySelector('.video-loading').style.display='none'"
-                                   onerror="showVideoError(this)">
-                                <source src="static/videos/Rotating.mp4" type="video/mp4">
-                                <source src="static/videos/Rotating.webm" type="video/webm">
-                                Your browser does not support the video tag.
-                            </video>
-                            <div class="video-error">
-                                <p>This video cannot be played. Possible reasons:</p>
-                                <ul>
-                                    <li>Video format not supported by your browser</li>
-                                    <li>Video file is missing or corrupted</li>
-                                    <li>Network connection issue</li>
-                                </ul>
-                                <p>Try using a different browser or check the file path.</p>
-                            </div>
-                        </div>
-                    </div>
-                    
-                    <!-- 视频 2 -->
-                    <div class="carousel-item">
-                        <div class="video-container">
-                            <div class="video-loading">Loading video...</div>
-                            <video poster="" controls controlsList="nodownload" muted playsinline loop preload="metadata" 
-                                   style="width: 100%; height: auto; max-height: 400px; object-fit: contain;"
-                                   oncanplay="this.parentElement.querySelector('.video-loading').style.display='none'"
-                                   onerror="showVideoError(this)">
-                                <source src="static/videos/Rotating1.mp4" type="video/mp4">
-                                <source src="static/videos/Rotating1.webm" type="video/webm">
-                                Your browser does not support the video tag.
-                            </video>
-                            <div class="video-error">
-                                <p>This video cannot be played. Possible reasons:</p>
-                                <ul>
-                                    <li>Video format not supported by your browser</li>
-                                    <li>Video file is missing or corrupted</li>
-                                    <li>Network connection issue</li>
-                                </ul>
-                                <p>Try using a different browser or check the file path.</p>
-                            </div>
-                        </div>
-                    </div>
-                    
-                    <!-- 视频 3 -->
-                    <div class="carousel-item">
-                        <div class="video-container">
-                            <div class="video-loading">Loading video...</div>
-                            <video poster="" controls controlsList="nodownload" muted playsinline loop preload="metadata" 
-                                   style="width: 100%; height: auto; max-height: 400px; object-fit: contain;"
-                                   oncanplay="this.parentElement.querySelector('.video-loading').style.display='none'"
-                                   onerror="showVideoError(this)">
-                                <source src="static/videos/Rotating2.mp4" type="video/mp4">
-                                <source src="static/videos/Rotating2.webm" type="video/webm">
-                                Your browser does not support the video tag.
-                            </video>
-                            <div class="video-error">
-                                <p>This video cannot be played. Possible reasons:</p>
-                                <ul>
-                                    <li>Video format not supported by your browser</li>
-                                    <li>Video file is missing or corrupted</li>
-                                    <li>Network connection issue</li>
-                                </ul>
-                                <p>Try using a different browser or check the file path.</p>
-                            </div>
-                        </div>
-                    </div>
-                    
-                    <!-- 视频 4 -->
-                    <div class="carousel-item">
-                        <div class="video-container">
-                            <div class="video-loading">Loading video...</div>
-                            <video poster="" controls controlsList="nodownload" muted playsinline loop preload="metadata" 
-                                   style="width: 100%; height: auto; max-height: 400px; object-fit: contain;"
-                                   oncanplay="this.parentElement.querySelector('.video-loading').style.display='none'"
-                                   onerror="showVideoError(this)">
-                                <source src="static/videos/Rotating3.mp4" type="video/mp4">
-                                <source src="static/videos/Rotating3.webm" type="video/webm">
-                                Your browser does not support the video tag.
-                            </video>
-                            <div class="video-error">
-                                <p>This video cannot be played. Possible reasons:</p>
-                                <ul>
-                                    <li>Video format not supported by your browser</li>
-                                    <li>Video file is missing or corrupted</li>
-                                    <li>Network connection issue</li>
-                                </ul>
-                                <p>Try using a different browser or check the file path.</p>
-                            </div>
-                        </div>
-                    </div>
-                    
-                    <!-- 轮播导航 -->
-                    <div class="carousel-nav">
-                        <span class="carousel-dot active" onclick="showCarouselSlide('rotating', 0)"></span>
-                        <span class="carousel-dot" onclick="showCarouselSlide('rotating', 1)"></span>
-                        <span class="carousel-dot" onclick="showCarouselSlide('rotating', 2)"></span>
-                        <span class="carousel-dot" onclick="showCarouselSlide('rotating', 3)"></span>
-                    </div>
-                </div>
-            </div>
+<section class="hero is-small">
+  <div class="hero-body">
+    <div style="width: 100%; max-width: none; padding: 0 1rem;">
+      <!-- 主标题 -->
+      <h2 class="title is-3" style="text-align: center;">Real-World Demonstrations</h2>
+      
+      <!-- 副标题Pouring -->
+      <h3 class="title is-4 has-text-left" style="margin-top: 0.5em; margin-bottom: 1em;margin-left: 20em;">Pouring</h3>
+      
+      <!-- 轮播组件容器 (保持原有 class) -->
+       <div id="results-carousel" class="carousel results-carousel" style="width: 40%; margin: auto auto; padding: 0; border: none; border-radius: 0;">
+        <!-- 视频 1 -->
+        <div class="item item-video1" style="margin: 0; padding: 0;">
+          <video poster="" controls controlsList="nodownload novolume" muted playsinline webkit-playsinline loop preload="metadata" style="width: 100%; height: auto; max-height: 400px; object-fit: contain;">
+            <source src="static/videos/Pouring.mp4" type="video/mp4">
+          </video>
         </div>
-    </section>
+        
+        <!-- 视频 2 -->
+        <div class="item item-video2" style="margin: 0; padding: 0;">
+          <video poster="" controls controlsList="nodownload novolume" muted loop preload="metadata" style="width: 100%; height: auto; max-height: 400px; object-fit: contain;">
+            <source src="static/videos/Pouring1.mp4" type="video/mp4">
+          </video>
+        </div>
+        
+        <!-- 视频 3 -->
+        <div class="item item-video3" style="margin: 0; padding: 0;">
+          <video poster="" controls controlsList="nodownload novolume" muted loop preload="metadata" style="width: 100%; height: auto; max-height: 400px; object-fit: contain;">
+            <source src="static/videos/Pouring2.mp4" type="video/mp4">
+          </video>
+        </div>
+        
+        <!-- 视频 4 -->
+        <div class="item item-video4" style="margin: 0; padding: 0;">
+          <video poster="" controls controlsList="nodownload novolume" muted loop preload="metadata" style="width: 100%; height: auto; max-height: 400px; object-fit: contain;">
+            <source src="static/videos/Pouring3.mp4" type="video/mp4">
+          </video>
+        </div>    
+      </div>
+      
+       <!-- 副标题Shaking -->
+      <h3 class="title is-4 has-text-left" style="margin-top: 0.5em; margin-bottom: 1em;margin-left: 20em;">Shaking</h3>
+      
+      <!-- 轮播组件容器 (保持原有 class) -->
+       <div id="results-carousel" class="carousel results-carousel" style="width: 40%; margin: auto auto; padding: 0; border: none; border-radius: 0;">
+        <!-- 视频 1 -->
+        <div class="item item-video1" style="margin: 0; padding: 0;">
+          <video poster="" controls controlsList="nodownload novolume" muted playsinline webkit-playsinline loop preload="metadata" style="width: 100%; height: auto; max-height: 400px; object-fit: contain;">
+            <source src="static/videos/Shaking.mp4" type="video/mp4">
+          </video>
+        </div>
+        
+        <!-- 视频 2 -->
+        <div class="item item-video2" style="margin: 0; padding: 0;">
+          <video poster="" controls controlsList="nodownload novolume" muted loop preload="metadata" style="width: 100%; height: auto; max-height: 400px; object-fit: contain;">
+            <source src="static/videos/Shaking1.mp4" type="video/mp4">
+          </video>
+        </div>
+        
+        <!-- 视频 3 -->
+        <div class="item item-video3" style="margin: 0; padding: 0;">
+          <video poster="" controls controlsList="nodownload novolume" muted loop preload="metadata" style="width: 100%; height: auto; max-height: 400px; object-fit: contain;">
+            <source src="static/videos/Shaking2.mp4" type="video/mp4">
+          </video>
+        </div>
+        
+        <!-- 视频 4 -->
+        <div class="item item-video4" style="margin: 0; padding: 0;">
+          <video poster="" controls controlsList="nodownload novolume" muted loop preload="metadata" style="width: 100%; height: auto; max-height: 400px; object-fit: contain;">
+            <source src="static/videos/Shaking3.mp4" type="video/mp4">
+          </video>
+        </div>    
+      </div>
 
-    <script>
-        // 显示轮播幻灯片
-        function showCarouselSlide(carouselType, slideIndex) {
-            const carousel = document.querySelector(`.${carouselType}-carousel`);
-            const items = carousel.querySelectorAll('.carousel-item');
-            const dots = carousel.querySelectorAll('.carousel-dot');
-            
-            // 隐藏所有项目
-            items.forEach(item => item.classList.remove('active'));
-            dots.forEach(dot => dot.classList.remove('active'));
-            
-            // 显示选定的项目
-            if (items[slideIndex]) {
-                items[slideIndex].classList.add('active');
-                dots[slideIndex].classList.add('active');
-            }
-        }
+<!-- 副标题Rotating -->
+      <h3 class="title is-4 has-text-left" style="margin-top: 0.5em; margin-bottom: 1em; margin-left: 20em;">Rotating</h3>
+      
+      <!-- 轮播组件容器 (保持原有 class) -->
+       <div id="results-carousel" class="carousel results-carousel" style="width: 40%; margin: auto auto; padding: 0; border: none; border-radius: 0;">
+        <!-- 视频 1 -->
+        <div class="item item-video1" style="margin: 0; padding: 0;">
+          <video poster="" controls controlsList="nodownload novolume" muted playsinline webkit-playsinline loop preload="metadata" style="width: 100%; height: auto; max-height: 400px; object-fit: contain;">
+            <source src="static/videos/Rotating.mp4" type="video/mp4">
+          </video>
+        </div>
         
-        // 显示视频错误信息
-        function showVideoError(videoElement) {
-            const container = videoElement.parentElement;
-            const errorDiv = container.querySelector('.video-error');
-            const loadingDiv = container.querySelector('.video-loading');
-            
-            loadingDiv.style.display = 'none';
-            errorDiv.style.display = 'block';
-            videoElement.style.display = 'none';
-        }
+        <!-- 视频 2 -->
+        <div class="item item-video2" style="margin: 0; padding: 0;">
+          <video poster="" controls controlsList="nodownload novolume" muted loop preload="metadata" style="width: 100%; height: auto; max-height: 400px; object-fit: contain;">
+            <source src="static/videos/Rotating1.mp4" type="video/mp4">
+          </video>
+        </div>
         
-        // 自动轮播功能（可选）
-        function startAutoCarousel(carouselType, interval = 5000) {
-            let currentSlide = 0;
-            const carousel = document.querySelector(`.${carouselType}-carousel`);
-            const items = carousel.querySelectorAll('.carousel-item');
-            
-            return setInterval(() => {
-                currentSlide = (currentSlide + 1) % items.length;
-                showCarouselSlide(carouselType, currentSlide);
-            }, interval);
-        }
+        <!-- 视频 3 -->
+        <div class="item item-video3" style="margin: 0; padding: 0;">
+          <video poster="" controls controlsList="nodownload novolume" muted loop preload="metadata" style="width: 100%; height: auto; max-height: 400px; object-fit: contain;">
+            <source src="static/videos/Rotating2.mp4" type="video/mp4">
+          </video>
+        </div>
         
-        // 初始化轮播
-        document.addEventListener('DOMContentLoaded', function() {
-            // 可以在这里启动自动轮播
-            // const pouringInterval = startAutoCarousel('pouring');
-            // const shakingInterval = startAutoCarousel('shaking');
-            // const rotatingInterval = startAutoCarousel('rotating');
-        });
-    </script>
-</body>
-</html>
+        <!-- 视频 4 -->
+        <div class="item item-video4" style="margin: 0; padding: 0;">
+          <video poster="" controls controlsList="nodownload novolume" muted loop preload="metadata" style="width: 100%; height: auto; max-height: 400px; object-fit: contain;">
+            <source src="static/videos/Rotating3.mp4" type="video/mp4">
+          </video>
+        </div>    
+      </div>
+      
+    </div>
+  </div>
+</section>
+为什么视频在一些电脑上无法播放
 
 
 <script>
