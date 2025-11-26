@@ -406,28 +406,28 @@
         <!-- 视频 1 -->
         <div class="item item-video1" style="margin: 0; padding: 0;">
           <video poster="" controls controlsList="nodownload novolume" muted playsinline webkit-playsinline loop preload="metadata" style="width: 100%; height: auto; max-height: 400px; object-fit: contain;">
-            <source src="static/videos/Pouring.mp4" type="video/mp4">
+            <source src="static/videos/Pouring_3x.mp4" type="video/mp4">
           </video>
         </div>
         
         <!-- 视频 2 -->
         <div class="item item-video2" style="margin: 0; padding: 0;">
           <video poster="" controls controlsList="nodownload novolume" muted loop preload="metadata" style="width: 100%; height: auto; max-height: 400px; object-fit: contain;">
-            <source src="static/videos/Pouring1.mp4" type="video/mp4">
+            <source src="static/videos/Pouring1_3x.mp4" type="video/mp4">
           </video>
         </div>
         
         <!-- 视频 3 -->
         <div class="item item-video3" style="margin: 0; padding: 0;">
           <video poster="" controls controlsList="nodownload novolume" muted loop preload="metadata" style="width: 100%; height: auto; max-height: 400px; object-fit: contain;">
-            <source src="static/videos/Pouring2.mp4" type="video/mp4">
+            <source src="static/videos/Pouring2_3x.mp4" type="video/mp4">
           </video>
         </div>
         
         <!-- 视频 4 -->
         <div class="item item-video4" style="margin: 0; padding: 0;">
           <video poster="" controls controlsList="nodownload novolume" muted loop preload="metadata" style="width: 100%; height: auto; max-height: 400px; object-fit: contain;">
-            <source src="static/videos/Pouring3.mp4" type="video/mp4">
+            <source src="static/videos/Pouring3_3x.mp4" type="video/mp4">
           </video>
         </div>    
       </div>
@@ -440,28 +440,28 @@
         <!-- 视频 1 -->
         <div class="item item-video1" style="margin: 0; padding: 0;">
           <video poster="" controls controlsList="nodownload novolume" muted playsinline webkit-playsinline loop preload="metadata" style="width: 100%; height: auto; max-height: 400px; object-fit: contain;">
-            <source src="static/videos/Shaking.mp4" type="video/mp4">
+            <source src="static/videos/Shaking_3x.mp4" type="video/mp4">
           </video>
         </div>
         
         <!-- 视频 2 -->
         <div class="item item-video2" style="margin: 0; padding: 0;">
           <video poster="" controls controlsList="nodownload novolume" muted loop preload="metadata" style="width: 100%; height: auto; max-height: 400px; object-fit: contain;">
-            <source src="static/videos/Shaking1.mp4" type="video/mp4">
+            <source src="static/videos/Shaking1_3x.mp4" type="video/mp4">
           </video>
         </div>
         
         <!-- 视频 3 -->
         <div class="item item-video3" style="margin: 0; padding: 0;">
           <video poster="" controls controlsList="nodownload novolume" muted loop preload="metadata" style="width: 100%; height: auto; max-height: 400px; object-fit: contain;">
-            <source src="static/videos/Shaking2.mp4" type="video/mp4">
+            <source src="static/videos/Shaking2_3x.mp4" type="video/mp4">
           </video>
         </div>
         
         <!-- 视频 4 -->
         <div class="item item-video4" style="margin: 0; padding: 0;">
           <video poster="" controls controlsList="nodownload novolume" muted loop preload="metadata" style="width: 100%; height: auto; max-height: 400px; object-fit: contain;">
-            <source src="static/videos/Shaking3.mp4" type="video/mp4">
+            <source src="static/videos/Shaking3_3x.mp4" type="video/mp4">
           </video>
         </div>    
       </div>
@@ -474,28 +474,28 @@
         <!-- 视频 1 -->
         <div class="item item-video1" style="margin: 0; padding: 0;">
           <video poster="" controls controlsList="nodownload novolume" muted playsinline webkit-playsinline loop preload="metadata" style="width: 100%; height: auto; max-height: 400px; object-fit: contain;">
-            <source src="static/videos/Rotating.mp4" type="video/mp4">
+            <source src="static/videos/Rotating_3x.mp4" type="video/mp4">
           </video>
         </div>
         
         <!-- 视频 2 -->
         <div class="item item-video2" style="margin: 0; padding: 0;">
           <video poster="" controls controlsList="nodownload novolume" muted loop preload="metadata" style="width: 100%; height: auto; max-height: 400px; object-fit: contain;">
-            <source src="static/videos/Rotating1.mp4" type="video/mp4">
+            <source src="static/videos/Rotating1_3x.mp4" type="video/mp4">
           </video>
         </div>
         
         <!-- 视频 3 -->
         <div class="item item-video3" style="margin: 0; padding: 0;">
           <video poster="" controls controlsList="nodownload novolume" muted loop preload="metadata" style="width: 100%; height: auto; max-height: 400px; object-fit: contain;">
-            <source src="static/videos/Rotating2.mp4" type="video/mp4">
+            <source src="static/videos/Rotating2_3x.mp4" type="video/mp4">
           </video>
         </div>
         
         <!-- 视频 4 -->
         <div class="item item-video4" style="margin: 0; padding: 0;">
           <video poster="" controls controlsList="nodownload novolume" muted loop preload="metadata" style="width: 100%; height: auto; max-height: 400px; object-fit: contain;">
-            <source src="static/videos/Rotating3.mp4" type="video/mp4">
+            <source src="static/videos/Rotating3_3x.mp4" type="video/mp4">
           </video>
         </div>    
       </div>
@@ -509,8 +509,7 @@
 <script>
 document.addEventListener('DOMContentLoaded', function() {
   document.querySelectorAll('video:not(#overview)').forEach(video => {
-    // 1. 设置 3 倍速
-    video.playbackRate = 3;
+
     
     // 2. 禁用右键菜单
     video.addEventListener('contextmenu', function(e) {
@@ -519,35 +518,8 @@ document.addEventListener('DOMContentLoaded', function() {
 
     // 3. 默认静音
     video.muted = true;
-    
-    // 4. 强制锁定静音状态
-    // 监听音量变化事件
-    video.addEventListener('volumechange', function() {
-      // 如果音量被设置为非零，强制将其重置为 0 并静音
-      if (video.volume !== 0) {
-        video.volume = 0;
-        video.muted = true;
-      }
-    });
 
-    // 5. 防止通过键盘快捷键调整音量
-    video.addEventListener('keydown', function(e) {
-      // 禁止上下箭头键（通常用于调整音量）
-      if (e.key === 'ArrowUp' || e.key === 'ArrowDown') {
-        e.preventDefault();
-      }
-    });
 
-    // 6. 隐藏音量控件（如果有 controls 的话）
-    if (video.hasAttribute('controls')) {
-      // 尝试添加 'novolume' 到 controlsList
-      if (video.controlsList && video.controlsList.add) {
-        video.controlsList.add('novolume');
-      }
-      
-      // 为了更好的兼容性，可以同时设置一个 CSS 规则来隐藏音量按钮
-      // 注意: 这需要配合 CSS 使用，或者使用更复杂的 JS 来移除 DOM 元素
-    }
     video.removeAttribute('controls');
   });
 });
