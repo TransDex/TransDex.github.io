@@ -231,7 +231,6 @@
             <div class="is-size-5 publication-authors" style="margin-top: 0;">
                     <!-- TODO: Replace with your institution and conference/journal info -->
                     <span class="author-block">University of Science and Technology of China</span>
-                  
                   </div>
               <!-- 在作者列表下方添加通讯作者说明 -->
               <div class="is-size-6 has-text-centered" style="margin-top: 0;">
@@ -300,6 +299,39 @@
   </div>
 </section>
 <!-- End teaser video -->
+    <script>
+// 核心逻辑：截取视频第57秒帧作为封面
+const video = document.getElementById('overview');
+// 等待视频元数据（时长、分辨率等）加载完成
+video.addEventListener('loadedmetadata', () => {
+  // 1. 跳转到视频第57秒的位置
+  video.currentTime = 57;
+  
+  // 2. 等待跳转完成后，截取帧
+  video.addEventListener('seeked', () => {
+    // 创建临时canvas用于截取视频帧
+    const canvas = document.createElement('canvas');
+    // 匹配视频的分辨率（保证封面清晰度）
+    canvas.width = video.videoWidth;
+    canvas.height = video.videoHeight;
+    // 绘制视频当前帧（第57秒）到canvas
+    const ctx = canvas.getContext('2d');
+    ctx.drawImage(video, 0, 0, canvas.width, canvas.height);
+    // 把canvas转换成base64图片，赋值给video的poster属性
+    video.poster = canvas.toDataURL('image/png');
+    
+    // 可选：释放临时canvas（不影响功能，仅优化性能）
+    canvas.remove();
+  }, { once: true }); // 只执行一次，避免重复截取
+});
+
+// 兼容处理：如果视频加载失败，显示默认提示（可选）
+video.addEventListener('error', () => {
+  console.error('视频加载失败，无法截取封面');
+  // 可手动设置默认封面图片
+  // video.poster = 'static/images/default-cover.png';
+});
+</script>
 
 <!-- Paper abstract -->
 <section class="section hero is-light">
